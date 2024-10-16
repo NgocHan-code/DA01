@@ -1,3 +1,5 @@
-SELECT NAME 
-FROM EMPLOYEE WHERE SALARY > 2000 AND MONTHS < 10 
-ORDER BY EMPLOYEE_ID ASC;
+SELECT manufacturer,COUNT(drug),SUM(cogs-total_sales) AS total_loss 
+FROM pharmacy_sales
+WHERE cogs>total_sales
+GROUP BY manufacturer
+ORDER BY total_loss DESC;
