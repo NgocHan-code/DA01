@@ -1,0 +1,30 @@
+            Console.OutputEncoding = Encoding.UTF8;
+            Console.WriteLine("Nhap so phan tu cua mang: ");
+            int n = int.Parse(Console.ReadLine());
+            int[] A = new int[n];
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write(" Nhap phan tu thu {0}:", i);
+                A[i] = int.Parse(Console.ReadLine());
+            }
+            Console.WriteLine();
+            Console.WriteLine("Nhap so can tim:");
+            int so = int.Parse(Console.ReadLine());
+            bool found = false;
+            Console.WriteLine("Tim thay so o vi tri: ", so);
+            for (int i = 0; i < so; i++)
+            {
+                if (A[i] == so)
+                {
+                    Console.WriteLine("vi tri: {0}", i);
+                    found = true;
+                }
+            }
+            if (!found)
+            {
+                Console.WriteLine("Khong tim thay so{0}", so);
+            }
+            Console.ReadKey();
+        }
+    }
+}
